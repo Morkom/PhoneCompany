@@ -9,6 +9,7 @@ public class DateUtils {
         Calendar endIntervalCal = getCalendar(startCal.getTime(), 16, 0, 0);
         return startCal.getTime().compareTo(startIntervalCal.getTime()) >= 0 && startCal.getTime().compareTo(endIntervalCal.getTime()) < 0;
     }
+
     public static Calendar getCalendar(Date date, int hours, int minutes, int seconds) {
         Calendar helpCal = Calendar.getInstance();
         helpCal.setTime(date);

@@ -10,6 +10,7 @@ public class PhoneLogUtils {
     private static final BigDecimal highTariffOutIntervalPrice = new BigDecimal("0.5");
     private static final BigDecimal otherTariffPrice = new BigDecimal("0.2");
     private static final BigDecimal timeLimit = new BigDecimal("5"); // Time limit after which each minute costs "otherTariffPrice" [minutes]
+
     public static Long getFavouriteNumber(List<String[]> phoneLog) {
         var numberList = new ArrayList<>();
         phoneLog.forEach(entry -> numberList.add(entry[0]));

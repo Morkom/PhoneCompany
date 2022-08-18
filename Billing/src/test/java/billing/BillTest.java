@@ -17,7 +17,6 @@ class BillTest {
         Path filePath = Path.of("src/test/resources/mockup.csv");
         String content = Files.readString(filePath, StandardCharsets.UTF_8);
         var billPrice = new Bill().calculate(content);
-
-        assertEquals(billPrice, BigDecimal.valueOf(132.7));
+        assertEquals(billPrice, BigDecimal.valueOf(132.7), "Calculated bill price does not match the actual");
     }
 }

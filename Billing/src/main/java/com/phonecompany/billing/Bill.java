@@ -19,9 +19,9 @@ public class Bill implements TelephoneBillCalculator {
         CSVReader reader = new CSVReader(new StringReader(phoneLog));
         BigDecimal price = BigDecimal.ZERO;
         try {
-            var pol = reader.readAll();
-            var favouriteNumber = PhoneLogUtils.getFavouriteNumber(pol);
-            for (var entry : pol) {
+            var phoneLogList = reader.readAll();
+            var favouriteNumber = PhoneLogUtils.getFavouriteNumber(phoneLogList);
+            for (var entry : phoneLogList) {
                 if (favouriteNumber.toString().equals(entry[0])) {
                     continue;
                 }
